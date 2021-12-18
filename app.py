@@ -15,7 +15,7 @@ def index():
 
 @app.route('/', methods=['POST','GET'])
 def form():
-    f=open('test.json','r')
+    f=open('data/test.json','r')
     json_dict=json.load(f)
     vectorizer = TfidfVectorizer()
 
@@ -52,7 +52,8 @@ def form():
         for n in range(3):
             if coo.data[m]==new_vl[n]:
                 a.append(wordlist[coo.col[m]])
-        
+    print(a)
+
     return render_template('index2.html', \
     title="おすすめの材料教えます", \
     message="おすすめの材料は「%s」、「%s」、「%s」です！" % (a[0],a[1],a[2]))
@@ -60,4 +61,4 @@ def form():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(host='0.0.0.0', port=os.environ['PORT'])
+    app.run(host='localhost', port=5000)
