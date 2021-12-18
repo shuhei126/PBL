@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>卍-占いの館-卍</title>
+</head>
+<body>
+    <div class ="header">
+    </div>
+    <div class="main">
+        <h1>{{title}}</h1>
+        <p>{{message}
+            {message2}
+            {message3}
+            {message4}}
+        </p>
+        <form method="post" action="/">
+            <input type="text" name="field">
+            <input type="submit">
+        </form>
+        <form method="post" action="/">
+            <input type="text" name="field2">
+            <input type="submit">
+        </form>
+    </div>
+    <div class ="footer">
+        <strong>信じるか信じないかはあなた次第です</strong>
+    </div>
+</body>
+
