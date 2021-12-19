@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     return render_template('index.html', \
-    title="相性のいい材料をお教えします", \
+    title="相性のいい材料を教えます", \
     message="使いたい材料は？")
 
 @app.route('/', methods=['POST','GET'])
@@ -52,7 +52,6 @@ def form():
         for n in range(3):
             if coo.data[m]==new_vl[n]:
                 a.append(wordlist[coo.col[m]])
-    print(a)
 
     return render_template('index.html', \
     title="おすすめの材料教えます", \
