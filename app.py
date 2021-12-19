@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index2.html', \
+    return render_template('index.html', \
     title="相性のいい材料をお教えします", \
     message="使いたい材料は？")
 
@@ -61,4 +61,4 @@ def form():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(host='localhost', port=5000)
+    app.run(host='0,0,0,0', port=os.environ['PORT'])
