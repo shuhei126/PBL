@@ -55,7 +55,7 @@ def form():
 
     return render_template('index.html', \
     title="おすすめの材料教えます", \
-    message="おすすめの材料は「%s」、「%s」、「%s」です！" % (a[0],a[1],a[2]))
+    message="おすすめの材料は「%s」、「%s」、「%s」です!" % (a[0],a[1],a[2]))
         
 
 if __name__ == '__main__':
