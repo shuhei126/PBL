@@ -54,7 +54,7 @@ def form():
                 a.append(wordlist[coo.col[m]])
     print(a)
 
-    return render_template('index2.html', \
+    return render_template('index.html', \
     title="おすすめの材料教えます", \
     message="おすすめの材料は「%s」、「%s」、「%s」です！" % (a[0],a[1],a[2]))
         
