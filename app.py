@@ -15,7 +15,7 @@ def index():
 
 @app.route('/', methods=['POST','GET'])
 def form():
-    f=open('/data/test.json','r')
+    f=open('data/test.json','r')
     json_dict=json.load(f)
     vectorizer = TfidfVectorizer()
 
@@ -60,4 +60,4 @@ def form():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(host='localhost', port=5001)
+    app.run(host='0.0.0.0', port=os.environ['PORT'])
