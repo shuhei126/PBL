@@ -15,7 +15,7 @@ def index():
 
 @app.route('/', methods=['POST','GET'])
 def form():
-    f=open('data/test.json','r')
+    f=open('/data/test.json','r')
     json_dict=json.load(f)
     vectorizer = TfidfVectorizer()
 
